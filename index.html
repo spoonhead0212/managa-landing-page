@@ -16,7 +16,7 @@
     <header>
       <div class="navigation"><!--logo and header block-->
         <img src="images/logo.svg" class="site-logo" alt="Site logo">
-        <nav>
+        <nav class="menu-list hidden">
           <ul class="menu">
             <li><a href="#">Pricing</a></li>
             <li><a href="#">Product</a></li>
@@ -25,12 +25,15 @@
             <li><a href="#">Community</a></li>
           </ul>
         </nav>
-        <a href="#" class="btn">Get Started</a>
+        <a href="#" class="btn nav-cta">Get Started</a>
+        <!-- mobile menu icon -->
+        <img src="images/icon-hamburger.svg" alt="hamburger icon" class="burger-icon">
+        <!-- mobile menu icon -->
       </div><!--logo and header blog-->
       
-      <div class="headline"><!--header and call to action-->
+      <div class="headline">
         <div class="headline-cont">
-          <div>
+          <div class="head-cont-mob">
             <h1>Bring everyone together to build better products.</h1>
             <p>Manage makes it simple for software teams to pla day-to-day tasks while keeping the larger team goals in view.</p>
             <a href="#" class="btn">Get Started</a>
@@ -39,7 +42,7 @@
         <div class="illu">
           <img src="images/illustration-intro.svg" alt="">
         </div>
-      </div><!--header and call to action-->
+      </div>
     </header>
 
     <section class="second-sec">
@@ -103,7 +106,7 @@
     <footer>
       <div class="foot-cont">
         <div class="foot-logo">
-          <img src="images/logo.svg" alt="Site logo">
+          <img src="images/logo.svg" alt="Site logo" class="foot-site-logo">
           <div>
             <a href="#"><img src="images/icon-facebook.svg" alt="icon-facebook"></a>
             <a href="#"><img src="images/icon-youtube.svg" alt="icon-youtube"></a>
@@ -112,13 +115,13 @@
             <a href="#"><img src="images/icon-instagram.svg" alt="icon-instagram"></a>
           </div>
         </div>
-        <ul class="foot-menu">
+        <ul class="foot-menu top">
           <li><a href="#">Home</a></li>
           <li><a href="#">Pricing</a></li>
           <li><a href="#">Products</a></li>
           <li><a href="#">About Us</a></li>
         </ul>
-        <ul class="foot-menu">
+        <ul class="foot-menu bottom">
           <li><a href="#">Careers</a></li>
           <li><a href="#">Community</a></li>
           <li><a href="#">Privacy Policy</a></li>
@@ -139,5 +142,6 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div>
+  <script src="script.js"></script>
 </body>
 </html>

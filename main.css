@@ -8,6 +8,7 @@
     --font-vietnam-pro: 'Rubik', sans-serif;
     --Bright-Red:hsl(12, 88%, 59%);
     --Brighter-Red:hsl(12, 85%, 66%);
+    --low-Brighter-Red:hsl(15, 42%, 93%);
     --Dark-Blue: hsl(228, 39%, 23%);
     --Font-size: 16px;
     --weight-400: 400;
@@ -41,7 +42,7 @@ header {
 
 /* icon and nav styling */
 .navigation {
-    width: 80%;
+    width: 85%;
     display: flex;
     margin-inline: auto;
     justify-content: space-between;
@@ -86,11 +87,15 @@ header {
 /* header and call to action */
 .headline {
     margin-block: 5rem;
-    width: 80%;
+    width: 85%;
     margin-inline: auto;
     display: flex;
     gap: 1.5rem;
     height: 450px;
+}
+
+.burger-icon {
+    display: none;
 }
 
 .headline-cont {
@@ -127,11 +132,11 @@ header {
 
 /* second section */
 .second-box {
-    margin-bottom: 5rem;
-    width: 80%;
+    margin-bottom: 3rem;
+    width: 85%;
     margin-inline: auto;
     display: flex;
-    gap: 5rem;
+    gap: 5rem
 }
 
 .sub-sec h4 {
@@ -191,13 +196,14 @@ header {
 
 .third-sec {
     max-width: 100%;
+    margin-bottom: 5rem;
 }
 
 .third-sec h3 {
     color: var(--Dark-Blue);
     font-weight: var(--weight-500);
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 1.5rem;
 }
 
 .card-wrap {
@@ -244,7 +250,7 @@ header {
 }
 
 .fourth-sec div {
-    width: 80%;
+    width: 85%;
     margin: auto;
     display: flex;
     justify-content: space-between;
@@ -280,7 +286,7 @@ footer {
 .foot-cont {
     display: flex;
     justify-content: space-between;
-    width: 80%;
+    width: 85%;
     margin-inline: auto;
 }
 
@@ -309,8 +315,143 @@ footer {
 }
 
 .search p {
-    color: var(--Vary-Light-Gray);
+    color: var(--Dark-Grayish-Blue);
+    font-size: 12px;
 }
 
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
+
+@media screen and (max-width: 997px) {
+    /* mobile menu */
+    .nav-cta {
+        display: none;
+    }
+
+    .menu-list {
+        transform: translateY(65%);
+        transition: 400ms ease-in;
+    }
+
+    .hidden {
+        transform: translateY(-65%);
+    }
+
+    h1, h2, h3, h4, h5 {
+        font-weight: var(--weight-700);
+    }
+
+    .burger-icon {
+        display: block;
+        transition-duration: 400ms ease-in-out;
+    }
+
+    .menu-list {
+        width: 85%;
+        border-radius: 5px;
+        position: absolute;
+        padding-block: 1rem;
+        background: var(--Vary-Light-Gray);
+    }
+
+    .menu li {
+        display: block;
+        text-align: center;
+        margin-block: 1.5rem;
+    }
+
+    .headline {
+        flex-direction: column;
+    }
+
+    .illu {
+        order: 1;
+    }
+
+    .headline-cont {
+        order: 2;
+    }
+
+    /* footer */
+    .foot-cont {
+        flex-direction: column;
+    }
+
+    .foot-logo div {
+        display: flex;
+        justify-content: center;
+    }
+
+    .foot-logo {
+        gap: 1rem;
+    }
+
+    .foot-logo a {
+        margin-inline: 1rem;
+    }
+
+    .foot-menu li {
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    .top {
+        margin-top: 2rem;
+    }
+
+    .bottom {
+        margin-bottom: 2rem;
+    }
+
+    .search {
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .fourth-sec div {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .card {
+        min-width: 300px;
+    }
+
+    .second-box {
+        flex-direction: column;
+    }
+
+    .headline {
+        height: unset;
+    }
+
+    .headline-cont div {
+        text-align: center;
+    }
+
+    :is(.head-cont-mob, .second-left) :is(h1, h2, p) {
+        width: unset;
+        text-align: center;
+    }
+
+    .second-box {
+        gap: 2rem;
+    }
+
+    .one::before,
+    .two::before,
+    .three::before {
+        padding-block: 4px;
+        left: 0;
+        z-index: 2;
+    }
+
+    :is(.one, .two, .three) h4{
+        transform: translateX(10%);
+        font-size: 14px;
+        padding-left: 8%;
+        padding-block: 3px;
+        background-color: var(--low-Brighter-Red);
+    }
+}
